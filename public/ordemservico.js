@@ -3,14 +3,14 @@ let totalGeralOs = 0, totalGeralItensOs = 0, totalGeralServOs = 0, descontoos = 
 let acrescimoos = 0, adiantamentoos =0, montodeb = 0, montocred = 0, subTotalOs=0, trocoos = 0, totalx = 0;   
 let = selecclieno = 0
 function cadordemos() {  
-
+   function cadordemos() {
   if (moduloAtivo === 'finalizado' && swti === 9) {
-    swti = 5;        
-    moduloAtivo = '';
+    swti = 5;          // libera
+    moduloAtivo = ''; // reseta
     return;
-  }  
-  if (moduloAtivo === 'parcelas') return;  
-  
+  }
+  if (moduloAtivo === 'parcelas') return;
+    
   moduloAtivo = 'os';
   swti = 5;
 
@@ -28,6 +28,8 @@ function cadordemos() {
   tornarDescontoEAcrescimoSomenteLeitura(true);
   bloquearCamposOS(false);
   habilitarcontrolesOs();
+}
+
 
   window.scrollTo(0, 0);
   vendasos = [];  
