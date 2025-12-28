@@ -3,19 +3,14 @@ let totalGeralOs = 0, totalGeralItensOs = 0, totalGeralServOs = 0, descontoos = 
 let acrescimoos = 0, adiantamentoos =0, montodeb = 0, montocred = 0, subTotalOs=0, trocoos = 0, totalx = 0;   
 let = selecclieno = 0
 function cadordemos() {  
-   function cadordemos() {
 
-  // 🚫 Bloqueia SOMENTE se acabou de sair de parcelas
   if (moduloAtivo === 'finalizado' && swti === 9) {
-    swti = 5;          // libera
-    moduloAtivo = ''; // reseta
+    swti = 5;        
+    moduloAtivo = '';
     return;
-  }
-
-  // 🚫 ainda dentro de parcelas
-  if (moduloAtivo === 'parcelas') return;
-
-  // 🟢 fluxo normal
+  }  
+  if (moduloAtivo === 'parcelas') return;  
+  
   moduloAtivo = 'os';
   swti = 5;
 
@@ -33,8 +28,6 @@ function cadordemos() {
   tornarDescontoEAcrescimoSomenteLeitura(true);
   bloquearCamposOS(false);
   habilitarcontrolesOs();
-}
-
 
   window.scrollTo(0, 0);
   vendasos = [];  

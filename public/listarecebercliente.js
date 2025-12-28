@@ -21,7 +21,10 @@ function carregarClientesFiltro() {
   document.getElementById('btnFinalizar').style.display = 'none';               
   document.getElementById('btnFinalizarOs').style.display = 'none';
   document.getElementById('btnFinalizarOsOs').style.display = 'none';
-  document.getElementById('btnFinalizarFc').style.display = 'block'; 
+  document.getElementById('btnFinalizarFc').style.display = 'inline-block'; 
+  document.getElementById('btnCancelaros').style.display = 'inline-block';  
+  document.getElementById('btnCancelar').style.display = 'none'; 
+  document.getElementById('btnCancelarv').style.display = 'none';   
   RestauraLabel()
   tornarDescontoEAcrescimoSomenteLeitura(false)       
 }
@@ -487,7 +490,7 @@ function FinalizarOperacao() {
   document.getElementById('formCalculos').style.display = 'block';      
   document.getElementById("dinheiro").focus(); 
   document.getElementById('cartaoCredito').style.display = 'block';
-  document.getElementById('btnCancelar').style.display = 'none';        
+  document.getElementById('btnCancelaros').style.display = 'inline';
   document.querySelector('label[for="cartaoCredito"]').style.display = 'block';
   document.getElementById('parceladoCredito').parentElement.style.display = 'none';
   descontov = document.getElementById('desconto');
@@ -677,7 +680,7 @@ function limparoperacao(){
     document.getElementById('acres').textContent = '0.00';
     document.getElementById('formPainel').style.display = 'none';   
     document.getElementById('formCalculos').style.display = 'none';      
-    document.getElementById('btnCancelar').style.display = 'block';                
+    document.getElementById('btnCancelaros').style.display = 'inline-block';                
 }
 
 function reiniciarModulo() {
